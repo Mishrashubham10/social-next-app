@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
+import styles from './app.module.scss';
 
 const links = [
     {
@@ -36,14 +36,15 @@ const links = [
 
 const Navbar = () => {
   return (
-    <div>
+    <div className={styles.navbar}>
       <Link href="/">Shubham</Link>
-      <div>
+      <div className={styles.navList}>
         {links.map((link) => (
           <Link key={link.id} href={link.url}>
             {link.title}
         </Link>
         ))}
+        {/* <button>Logout</button> */}
       </div>
     </div>
   );
