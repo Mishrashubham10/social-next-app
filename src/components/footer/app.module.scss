@@ -1,0 +1,18 @@
+.container {
+    height: 3.125rem;
+    display: flex;
+    font-size: .8rem;
+    align-items: center;
+    justify-content: space-between;
+
+    .social {
+        display: flex;
+        gap: .7rem;
+        align-items: center;
+
+        .icon {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+    }
+}

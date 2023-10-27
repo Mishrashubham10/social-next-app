@@ -1,14 +1,31 @@
-.navbar {
+.container {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 4rem;
+    height: 6.25rem;
     text-align: center;
     padding: 1.3rem;
 
-    .navList {
+    .logo {
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+
+    .links {
         display: flex;
+        align-items: center;
         gap: .7rem;
+        letter-spacing: .2px;
+
+        .logout {
+            padding: 5px;
+            border: none;
+            background-color: #53c28b;
+            color: white;
+            cursor: pointer;
+            border-radius: 3px;
+            letter-spacing: .2px;
+        }
     }
 }

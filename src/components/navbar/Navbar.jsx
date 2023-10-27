@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './app.module.scss';
+import DarkModeToggle from '../darkModeToggle/DarkModeToggle';
 
 const links = [
     {
@@ -36,15 +37,16 @@ const links = [
 
 const Navbar = () => {
   return (
-    <div className={styles.navbar}>
-      <Link href="/">Shubham</Link>
-      <div className={styles.navList}>
+    <div className={styles.container}>
+      <Link href="/" className={styles.logo}>Shubham</Link>
+      <div className={styles.links}>
+        <DarkModeToggle />
         {links.map((link) => (
-          <Link key={link.id} href={link.url}>
+          <Link key={link.id} href={link.url} className={styles.link}>
             {link.title}
         </Link>
         ))}
-        {/* <button>Logout</button> */}
+        <button className={styles.logout}>Logout</button>
       </div>
     </div>
   );
